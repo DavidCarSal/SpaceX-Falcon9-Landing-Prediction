@@ -1,0 +1,6 @@
+[out:json][timeout:45];(
+way(around:15000,28.562302,-80.577356)["natural"="coastline"];
+way(around:15000,28.562302,-80.577356)["railway"="rail"];
+way(around:15000,28.562302,-80.577356)["highway"~"motorway|trunk|primary|secondary|tertiary"];
+node(around:50000,28.562302,-80.577356)["place"~"city|town"];
+);out body geom;

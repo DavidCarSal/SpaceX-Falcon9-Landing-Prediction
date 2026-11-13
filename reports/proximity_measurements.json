@@ -1,0 +1,79 @@
+{
+  "launch_site": "CCAFS SLC-40",
+  "latitude": 28.562302,
+  "longitude": -80.577356,
+  "method": "Nearest point on returned way segments using local projection, then spherical great-circle distance (R=6371.0088 km). Town uses mapped centre node. Not a travel distance. Mapped roads/rail/coastlines searched within 15 km, towns/cities within 50 km.",
+  "features": [
+    {
+      "feature": "Coastline",
+      "latitude": 28.56340003331565,
+      "longitude": -80.56800368058639,
+      "distance_km": 0.9214896543784179,
+      "name": "Unnamed mapped feature",
+      "osm_type": "way",
+      "osm_id": 22322002,
+      "tags": {
+        "natural": "coastline",
+        "source": "PGS"
+      },
+      "source_url": "https://www.openstreetmap.org/way/22322002"
+    },
+    {
+      "feature": "Railway",
+      "latitude": 28.562296853757864,
+      "longitude": -80.57732328332726,
+      "distance_km": 0.0032460259213972437,
+      "name": "Unnamed mapped feature",
+      "osm_type": "way",
+      "osm_id": 96332348,
+      "tags": {
+        "railway": "rail",
+        "service": "spur"
+      },
+      "source_url": "https://www.openstreetmap.org/way/96332348"
+    },
+    {
+      "feature": "Road",
+      "latitude": 28.515758872389544,
+      "longitude": -80.61560404624608,
+      "distance_km": 6.383084548156517,
+      "name": "Nasa Parkway East",
+      "osm_type": "way",
+      "osm_id": 26948002,
+      "tags": {
+        "access": "private",
+        "highway": "secondary",
+        "maxspeed": "55 mph",
+        "name": "Nasa Parkway East",
+        "tiger:cfcc": "A25",
+        "tiger:county": "Brevard, FL",
+        "tiger:name_base": "Nasa",
+        "tiger:name_base_1": "State Road 405",
+        "tiger:name_direction_suffix": "E",
+        "tiger:name_type": "Pky"
+      },
+      "source_url": "https://www.openstreetmap.org/way/26948002"
+    },
+    {
+      "feature": "Town/city centre",
+      "latitude": 28.3881442,
+      "longitude": -80.6056464,
+      "distance_km": 19.561914332620535,
+      "name": "Cape Canaveral",
+      "osm_type": "node",
+      "osm_id": 154352850,
+      "tags": {
+        "alt_name": "Cape Kennedy",
+        "ele": "3",
+        "gnis:feature_id": "279995",
+        "incorporation_type": "city",
+        "name": "Cape Canaveral",
+        "place": "town",
+        "population": "11000",
+        "wikidata": "Q966657",
+        "wikipedia": "en:Cape Canaveral, Florida"
+      },
+      "source_url": "https://www.openstreetmap.org/node/154352850"
+    }
+  ]
+}

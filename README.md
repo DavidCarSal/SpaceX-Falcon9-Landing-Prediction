@@ -4,6 +4,14 @@ IBM Applied Data Science Capstone project by **David Carro Salinas**: historical
 
 Repository: https://github.com/DavidCarSal/SpaceX-Falcon9-Landing-Prediction
 
+## Final presentation
+
+**Ready-to-upload report:** [Data Science Capstone Project Report.pdf](presentation/Data%20Science%20Capstone%20Project%20Report.pdf), 40 slides, in English.
+
+[Editable PowerPoint](presentation/Data%20Science%20Capstone%20Project%20Report.pptx) contains the same report. The PDF was exported from Microsoft PowerPoint, rendered and visually reviewed page by page. It includes the real repository link, executed EDA and SQL results, actual Folium and Dash browser captures, sourced proximity measurements, four model scores, the selected confusion matrix, conclusions and limitations.
+
+Earlier drafts and the preliminary evidence supplement are kept only in [presentation/archive/](presentation/archive/). **Use the 40-slide final report for the submission.**
+
 ## Verified status
 
 Reviewed on **13 November 2026**, using Python 3.12. Six notebooks completed execution with saved outputs. The API notebook stopped because a SpaceX rockets endpoint returned **HTTP 522**. The subsequent analyses use separately downloaded IBM course snapshots and do not depend on a successful live API collection run.
@@ -15,12 +23,10 @@ Reviewed on **13 November 2026**, using Python 3.12. Six notebooks completed exe
 | [03 Data wrangling](notebooks/03_data_wrangling.ipynb) | Completed; 90 records, 60 successful and 30 unsuccessful labels |
 | [04 EDA and visualization](notebooks/04_eda_visualization.ipynb) | Completed; seven saved plots and encoded features |
 | [05 SQL analysis](notebooks/05_eda_sql.ipynb) | Completed; ten queries and result tables |
-| [06 Folium maps](notebooks/06_folium_maps.ipynb) | Completed; interactive HTML exported; manual proximity measurements remain pending |
+| [06 Folium maps](notebooks/06_folium_maps.ipynb) | Completed; HTML maps exported; sourced OSM proximity measurements and browser captures included |
 | [07 Machine learning](notebooks/07_machine_learning.ipynb) | Completed; four tuned models and saved confusion matrices |
 
 The execution method was IPython in-process with a fresh namespace for each notebook. An attempted Jupyter kernel execution did not complete in this environment. See [validation details](reports/validation.md), [recorded package versions](reports/environment.json) and each notebook's execution record in `reports/`.
-
-**Presentation status:** [Execution Evidence PDF](presentation/Execution_Evidence.pdf) contains actual plots and metrics. The supplied 38-slide [PowerPoint](presentation/original_draft_unverified.pptx) and [PDF](presentation/original_draft_unverified.pdf) are preserved as **original drafts**, with pending placeholders. They are not a fully verified Coursera submission. See the [presentation notes](presentation/README.md).
 
 ## Results
 
@@ -77,7 +83,7 @@ From the repository root:
 python app.py
 ```
 
-Open the local URL printed by Dash. The launch-site dropdown and payload range update both charts. Automated checks verified filters, empty subsets, layout endpoints and a real Dash callback HTTP request. Browser screenshots and a full visual interaction review remain pending.
+Open the local URL printed by Dash. The launch-site dropdown and payload range update both charts. Automated checks verified filters, empty subsets, layout endpoints and a real Dash callback HTTP request. Microsoft Edge browser checks also exercised the site dropdown and slider. Actual captures for all sites, KSC LC-39A and a 2,000-5,000 kg payload range are included in `images/`.
 
 ### Validation
 
@@ -85,7 +91,7 @@ Open the local URL printed by Dash. The launch-site dropdown and payload range u
 python scripts/validate_project.py
 ```
 
-This checks source hashes, all seven notebook schemas, six saved successful execution records, class labels, feature data, model score bounds and dashboard responses. It does not re-execute notebooks or certify the original presentation. The API's external failure is documented rather than counted as a successful execution.
+This checks source hashes, all seven notebook schemas, six saved successful execution records, class labels, feature data, model score bounds and dashboard responses. It does not re-execute notebooks. It also checks the final presentation file structure, 40 PDF pages, author, repository hyperlink, absence of result placeholders and OSM source hash. The API's external failure is documented rather than counted as a successful execution.
 
 ## Data and provenance
 
@@ -93,13 +99,21 @@ Original downloads are listed in [data/sources.json](data/sources.json), with UR
 
 The Wikipedia parser returned 121 records. This is a parser execution result, not proof that every launch or merged table cell was captured correctly. The scraped data is not used to train the classifiers.
 
-## Remaining work before final assessment
+## Interpretation limits
 
-- Retry notebook 01 after the SpaceX service recovers.
-- Measure and document railway, highway and city coordinates for the Folium proximity exercise. Its coastline point is illustrative and is not a verified nearest-coastline calculation.
-- Capture the required Folium and Dash browser views and review interaction behavior visually.
-- Replace placeholders in the original presentation with the verified plots, SQL tables, model results and repository link, then export and review the final PDF.
-- Review the actual Coursera rubric against the completed presentation before submission.
+The live API enrichment attempt returned HTTP 522, so notebook 01 is retained as a partial run. The executed analyses use independently downloaded IBM course snapshots. This limitation is stated in the final report; no live API output is invented.
+
+The geographic distances are approximate straight-line distances to returned OSM features at retrieval time. The mapped rail spur is within 0.01 km of the coarse course coordinate, which does not imply survey accuracy. The selected major-road query includes a private secondary road; town distance is to a mapped centre. They are not travel distances or historical infrastructure measurements.
+
+Use a temporal evaluation and audit every feature's pre-launch availability before attempting operational prediction. The final presentation covers the requested report sections; the assessment result remains the evaluator's decision.
+
+## Geographic reproducibility
+
+The Overpass query, raw response and retrieval/hash metadata are in `data/osm_proximity_query.txt`, `data/osm_proximity.json` and `data/osm_provenance.json`. Measurements and object IDs are in [reports/proximity_measurements.json](reports/proximity_measurements.json). To recompute them from the preserved geometry:
+
+```powershell
+python scripts/proximity_analysis.py
+```
 
 ## Attribution
 

@@ -1,48 +1,57 @@
-# Validation record - 13 November 2026
+# Validation record - final submission version, 13 November 2026
 
-## Files and execution
+## Final presentation
 
-The supplied ZIP contained seven notebooks. All seven now validate against the notebook v4.5 schema. The originals contained invalid `outputs` properties on markdown cells; these were removed and stable cell IDs added.
+The final report is `presentation/Data Science Capstone Project Report.pdf`: 40 slides in English, exported from Microsoft PowerPoint for Microsoft 365 using standard PDF output. The corresponding editable PPTX opened in PowerPoint successfully. The final PDF has searchable text, David Carro Salinas as author and a working repository hyperlink. Every PDF page was rendered and reviewed individually. No RUN REQUIRED, ADD YOUR or repository-result placeholders remain in the final report.
 
-Execution used Python 3.12 and IPython in-process, with a fresh namespace per notebook. Jupyter kernel execution was attempted but did not complete in this Windows environment. Successful execution therefore refers to the recorded in-process cell runs, not to an independent Jupyter kernel replay.
+The PPTX passed package integrity, layout/font checks and first-party re-import. All encoded slide text uses the source Aptos font. File hashes and the page-review record are in `final_presentation_validation.json`.
+
+The earlier drafts and 13-page preliminary supplement are preserved in `presentation/archive/` and superseded. Their pending-result statements refer to that earlier stage. They are not the submission file.
+
+## Notebooks and execution
+
+All seven notebooks validate against notebook schema v4.5. Invalid outputs properties on markdown cells were removed and stable cell IDs added. Execution used Python 3.12 and IPython in-process, with a fresh namespace per notebook. An attempted Jupyter kernel execution did not complete in this Windows environment; successful execution refers to the recorded in-process cell runs.
 
 | Notebook | Outcome |
 | --- | --- |
-| 01 API | Partial. Static course JSON loaded. Live rockets enrichment returned HTTP 522. Error retained in the notebook. |
-| 02 Scraping | Passed. 121 rows parsed from the fixed Wikipedia revision. Exhaustive semantic verification of table extraction was not performed. |
-| 03 Wrangling | Passed. 90 rows. 60 successful and 30 unsuccessful labels. |
-| 04 EDA | Passed. Seven PNG plots saved in the notebook and `images/`; numeric feature dataset exported. |
-| 05 SQL | Passed. Ten query outputs saved in notebook and independently queried into `sql_results.json`. |
-| 06 Folium | Passed. Interactive HTML generated. Railway/highway/city points remain unset, and coastline distance uses an illustrative point. Browser rendering was not visually verified. |
-| 07 ML | Passed. Four complete grid searches, scores and six PNG figures saved. |
+| 01 API | Partial. Course JSON loaded; live rockets enrichment returned HTTP 522. Error retained. |
+| 02 Scraping | Passed. 121 parsed rows from a fixed Wikipedia revision. Exhaustive merged-cell semantic validation was not performed. |
+| 03 Wrangling | Passed. 90 records, 60 successful and 30 unsuccessful labels. |
+| 04 EDA | Passed. Seven saved figures; numeric flight axes improved for readability; encoded features exported. |
+| 05 SQL | Passed. Ten executed queries; Mission_Outcome is trimmed before grouping. |
+| 06 Folium | Passed. Maps generated, sourced proximity coordinates included, consistent Earth radius used. |
+| 07 ML | Passed. Four complete grid searches, scores and six figures saved. |
 
-Per-notebook JSON records include duration and execution method. The failed API is not a successful end-to-end collection run. Subsequent notebooks use independently retrieved IBM snapshots, not a fabricated live API export.
+Per-notebook JSON records include duration and execution method. The API failure is not counted as successful end-to-end collection. Subsequent analysis uses independently downloaded IBM snapshots.
 
-## Corrections
+## Corrections and reproducibility
 
-- Classified outcomes by their semantic `True ` prefix instead of frequency-ranked indices.
-- Moved normalization inside scikit-learn Pipeline, fitted within training folds.
-- Stratified the 80/20 split, fixed random seeds and selected the model by training cross-validation score.
-- Removed a duplicate SVM kernel candidate and fixed tree randomness.
-- Removed repeated notebook dependency installation commands; dependencies are installed once from requirements.
-- Used stable local dataset paths, bounded/cached API requests and SQL display configuration.
-- Removed unused scraping dictionary keys that could produce empty columns; asserted nonempty extraction and equal column lengths.
-- Added the missing Dash application, using the historical dashboard dataset.
+- Outcome labels use the semantic True prefix, rather than frequency-ranked indices.
+- StandardScaler runs inside a Pipeline, fitted within each training CV fold.
+- The 80/20 split is stratified. Model selection uses mean training CV accuracy, with fixed split and tree random seeds.
+- Duplicate SVM kernel candidates were removed, local dataset paths standardized and repeated dependency installation cells replaced with one requirements file.
+- API requests are bounded and cached. Scraping requires nonempty extraction and equally sized columns.
+- The missing Dash application was implemented and tested.
+- The original downloads remain byte-for-byte preserved; Git attributes protect dataset hashes and PDF bytes from newline conversion.
 
-scikit-learn 1.9.1 failed to load a native library under Windows application control. Version 1.7.2 loaded and completed the searches; that is the version pinned in requirements and recorded in the environment report.
+scikit-learn 1.9.1 encountered a native-library loading error under Windows application control. Version 1.7.2 loaded and completed the searches. The executed version is pinned and recorded in `environment.json`.
 
-## Independent checks
+## Results and limits
 
-`python scripts/validate_project.py` passed: hashes for seven original downloaded sources, notebook schemas, all non-API execution counts/error outputs, binary labels, feature dimensions/missingness, score bounds, dashboard filtering for every site and three payload ranges (including empty subsets), page/layout/dependency endpoints and an actual callback HTTP response.
+The modeling dataset contains 90 records, with 72 training and 18 test cases. The decision tree achieved mean training CV accuracy 0.8892857143 and test accuracy 0.8333333333 (15/18). SVM tied the test accuracy but had a lower mean CV score. The selected tree has TN=3, FP=3, FN=0, TP=12; specificity on unsuccessful outcomes is 50%.
 
-Dashboard validation is automated and does not include browser screenshots or visual interaction testing. The Folium HTML was generated but not browser-tested. Remote resources may be needed to display map tiles and browser libraries.
+The evaluation is retrospective and small. No temporal holdout or operational point-in-time feature audit was performed. The course encoder and imputed inputs use the historical dataset; these scores do not establish prospective flight performance. The report states these limitations.
 
-The modeling dataset has 90 records (72 train, 18 test). Decision tree mean CV accuracy was 0.8892857143; test accuracy was 0.8333333333 (15/18). SVM tied its test accuracy, but had a lower mean training CV score. The selected tree was chosen by CV. See `model_scores.csv` for all models.
+## Geographic evidence
 
-No temporal holdout, operational point-in-time feature audit, uncertainty interval or external validation was performed. The course encoder uses the full historical data. These scores are retrospective educational evidence.
+The saved Overpass query returned mapped coastlines, railway lines and selected major-road classes within 15 km of the approximate course site coordinate, plus town/city nodes within 50 km. The raw response, timestamp, source object IDs and hash are preserved.
 
-## Presentation
+Nearest points on returned way segments were approximated in a local projection and measured with the spherical great-circle formula, using R=6371.0088 km. Distances are 0.92 km to mapped coastline, less than 0.01 km to a mapped rail spur, 6.38 km to the selected major road (NASA Parkway East, secondary/private) and 19.56 km to the Cape Canaveral mapped centre. These are not travel distances, survey-grade measurements or historical launch-year infrastructure data.
 
-The original PPTX ZIP and its XML parts parse successfully and contain 38 slides. The original PDF parses and contains 38 pages; representative pages were rendered and inspected. The files contain explicit pending placeholders and have not been turned into a final assessment report.
+Folium browser captures include national context, Florida outcomes and proximity views. The outcome detail view applies disclosed display-only offsets to coincident markers; the offsets are never used in distance calculations. Map tiles and data are attributed to OpenStreetMap contributors.
 
-`presentation/Execution_Evidence.pdf` is a separate 13-page evidence supplement. It includes actual plots and metrics and the repository URL. Its pages were rendered and visually reviewed. It explicitly states the remaining work and is not described as a complete Coursera submission.
+## Dashboard and independent checks
+
+Automated checks cover all sites, three payload ranges including empty subsets, layout/dependency endpoints and an actual Dash callback HTTP response. Microsoft Edge browser checks clicked the KSC option, moved the slider with the keyboard and captured actual rendered states for all sites, KSC and a 2,000-5,000 kg range.
+
+`python scripts/validate_project.py` checks source hashes, seven notebook schemas, six successful execution records, labels, features, four score rows, dashboard callbacks, OSM provenance and the final 40-page PDF / 40-slide PPTX, author and repository link. It does not re-execute the notebooks or guarantee a grade.

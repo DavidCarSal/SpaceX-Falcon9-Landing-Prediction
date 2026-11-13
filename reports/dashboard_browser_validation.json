@@ -1,0 +1,29 @@
+{
+  "browser": "Microsoft Edge, Playwright headless",
+  "dropdown": "Clicked KSC LC-39A option and checked selected text",
+  "slider": "Focused first slider and pressed ArrowRight; aria-valuenow became 100",
+  "captured_states": [
+    {
+      "site": "ALL",
+      "payload": [
+        0,
+        10000
+      ]
+    },
+    {
+      "site": "KSC LC-39A",
+      "payload": [
+        0,
+        10000
+      ]
+    },
+    {
+      "site": "ALL",
+      "payload": [
+        2000,
+        5000
+      ]
+    }
+  ],
+  "note": "Final screenshot filter values also set through Dash set_props; rendered charts reflect server callback outputs."
+}

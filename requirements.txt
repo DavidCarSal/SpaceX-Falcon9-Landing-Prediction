@@ -17,3 +17,4 @@ ipython==9.18.1
 plotly==7.1.0
 dash==4.5.0
 jupyterlab>=4,<5
+pypdf==6.21.4

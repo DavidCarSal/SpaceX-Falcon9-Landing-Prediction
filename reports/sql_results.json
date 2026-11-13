@@ -157,7 +157,7 @@
   },
   {
     "task": 7,
-    "query": "SELECT \"Mission_Outcome\", COUNT(*) AS total FROM SPACEXTABLE GROUP BY \"Mission_Outcome\";",
+    "query": "SELECT TRIM(\"Mission_Outcome\") AS Mission_Outcome, COUNT(*) AS total FROM SPACEXTABLE GROUP BY TRIM(\"Mission_Outcome\");",
     "columns": [
       "Mission_Outcome",
       "total"
@@ -169,11 +169,7 @@
       ],
       [
         "Success",
-        98
-      ],
-      [
-        "Success ",
-        1
+        99
       ],
       [
         "Success (payload status unclear)",

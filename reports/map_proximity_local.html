@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d53e3f7d433d39a5781320db69bc3461 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d53e3f7d433d39a5781320db69bc3461" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d53e3f7d433d39a5781320db69bc3461 = L.map(
+                "map_d53e3f7d433d39a5781320db69bc3461",
+                {
+                    center: [28.562302, -80.577356],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cf5a2cd5525b4d4da985474b3b087830 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_cf5a2cd5525b4d4da985474b3b087830.addTo(map_d53e3f7d433d39a5781320db69bc3461);
+        
+    
+            var marker_4ad416916e583afea9da21976ea40685 = L.marker(
+                [28.562302, -80.577356],
+                {
+}
+            ).addTo(map_d53e3f7d433d39a5781320db69bc3461);
+        
+    
+            var icon_2a861ad8d796e19473a101ec9b59ce2a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_4ad416916e583afea9da21976ea40685.bindTooltip(
+                `<div>
+                     CCAFS SLC-40
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4ad416916e583afea9da21976ea40685.setIcon(icon_2a861ad8d796e19473a101ec9b59ce2a);
+            
+    
+            var marker_518555f69346295a59b4cce824fd8229 = L.marker(
+                [28.56340003331565, -80.56800368058639],
+                {
+}
+            ).addTo(map_d53e3f7d433d39a5781320db69bc3461);
+        
+    
+            var icon_1f724d274775a8ce8e674a6a497b4741 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_26cff9ea21e47cc31b51fb3646a15f57 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6664aec2d540c9dddc6c544108f7c3d5 = $(`<div id="html_6664aec2d540c9dddc6c544108f7c3d5" style="width: 100.0%; height: 100.0%;">Coastline: Unnamed mapped feature (0.92 km)</div>`)[0];
+                popup_26cff9ea21e47cc31b51fb3646a15f57.setContent(html_6664aec2d540c9dddc6c544108f7c3d5);
+            
+        
+
+        marker_518555f69346295a59b4cce824fd8229.bindPopup(popup_26cff9ea21e47cc31b51fb3646a15f57)
+        ;
+
+        
+    
+    
+            marker_518555f69346295a59b4cce824fd8229.bindTooltip(
+                `<div>
+                     Coastline: Unnamed mapped feature (0.92 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_518555f69346295a59b4cce824fd8229.setIcon(icon_1f724d274775a8ce8e674a6a497b4741);
+            
+    
+            var poly_line_0ebadf7a4633bf959f2f25b191919895 = L.polyline(
+                [[28.562302, -80.577356], [28.56340003331565, -80.56800368058639]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d53e3f7d433d39a5781320db69bc3461);
+        
+    
+            poly_line_0ebadf7a4633bf959f2f25b191919895.bindTooltip(
+                `<div>
+                     Coastline: Unnamed mapped feature (0.92 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0f67dbb458d6b7eb374233579108a6c6 = L.marker(
+                [28.562296853757864, -80.57732328332726],
+                {
+}
+            ).addTo(map_d53e3f7d433d39a5781320db69bc3461);
+        
+    
+            var icon_b9cdf4cf945cd542caaf3227f837f574 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d4ced9f91c4d6b05019d4b984e50f9b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46e2b77128ec0379b97cbb6bd4f2f12e = $(`<div id="html_46e2b77128ec0379b97cbb6bd4f2f12e" style="width: 100.0%; height: 100.0%;">Railway: Unnamed mapped feature (0.00 km)</div>`)[0];
+                popup_d4ced9f91c4d6b05019d4b984e50f9b7.setContent(html_46e2b77128ec0379b97cbb6bd4f2f12e);
+            
+        
+
+        marker_0f67dbb458d6b7eb374233579108a6c6.bindPopup(popup_d4ced9f91c4d6b05019d4b984e50f9b7)
+        ;
+
+        
+    
+    
+            marker_0f67dbb458d6b7eb374233579108a6c6.bindTooltip(
+                `<div>
+                     Railway: Unnamed mapped feature (0.00 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0f67dbb458d6b7eb374233579108a6c6.setIcon(icon_b9cdf4cf945cd542caaf3227f837f574);
+            
+    
+            var poly_line_84d8675c306cfa1d84b198934a565c4d = L.polyline(
+                [[28.562302, -80.577356], [28.562296853757864, -80.57732328332726]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d53e3f7d433d39a5781320db69bc3461);
+        
+    
+            poly_line_84d8675c306cfa1d84b198934a565c4d.bindTooltip(
+                `<div>
+                     Railway: Unnamed mapped feature (0.00 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e4fad5a3d37199ae32b7040dd5b6cea4 = L.marker(
+                [28.515758872389544, -80.61560404624608],
+                {
+}
+            ).addTo(map_d53e3f7d433d39a5781320db69bc3461);
+        
+    
+            var icon_d3f1d60f5001a7e560236f20ca0fa5be = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6520b2ed3769af46aa554fd58c855b48 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd9a5697b22cf4b169c992f6f2315b1b = $(`<div id="html_fd9a5697b22cf4b169c992f6f2315b1b" style="width: 100.0%; height: 100.0%;">Road: Nasa Parkway East (6.38 km)</div>`)[0];
+                popup_6520b2ed3769af46aa554fd58c855b48.setContent(html_fd9a5697b22cf4b169c992f6f2315b1b);
+            
+        
+
+        marker_e4fad5a3d37199ae32b7040dd5b6cea4.bindPopup(popup_6520b2ed3769af46aa554fd58c855b48)
+        ;
+
+        
+    
+    
+            marker_e4fad5a3d37199ae32b7040dd5b6cea4.bindTooltip(
+                `<div>
+                     Road: Nasa Parkway East (6.38 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e4fad5a3d37199ae32b7040dd5b6cea4.setIcon(icon_d3f1d60f5001a7e560236f20ca0fa5be);
+            
+    
+            var poly_line_f558da82ab6b24e608d1c2ebca447f93 = L.polyline(
+                [[28.562302, -80.577356], [28.515758872389544, -80.61560404624608]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d53e3f7d433d39a5781320db69bc3461);
+        
+    
+            poly_line_f558da82ab6b24e608d1c2ebca447f93.bindTooltip(
+                `<div>
+                     Road: Nasa Parkway East (6.38 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_80b59d6b966fd58f6516121086e60f46 = L.marker(
+                [28.3881442, -80.6056464],
+                {
+}
+            ).addTo(map_d53e3f7d433d39a5781320db69bc3461);
+        
+    
+            var icon_f6d38ea3632ecbd5a3ce065af0de1dfa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_562c398ac999936c5724ef69d7cbc153 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2807c04e6e14cfb37d5c64329c80285 = $(`<div id="html_c2807c04e6e14cfb37d5c64329c80285" style="width: 100.0%; height: 100.0%;">Town/city centre: Cape Canaveral (19.56 km)</div>`)[0];
+                popup_562c398ac999936c5724ef69d7cbc153.setContent(html_c2807c04e6e14cfb37d5c64329c80285);
+            
+        
+
+        marker_80b59d6b966fd58f6516121086e60f46.bindPopup(popup_562c398ac999936c5724ef69d7cbc153)
+        ;
+
+        
+    
+    
+            marker_80b59d6b966fd58f6516121086e60f46.bindTooltip(
+                `<div>
+                     Town/city centre: Cape Canaveral (19.56 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_80b59d6b966fd58f6516121086e60f46.setIcon(icon_f6d38ea3632ecbd5a3ce065af0de1dfa);
+            
+    
+            var poly_line_4acfe4aa441518a33686b8a288d017d6 = L.polyline(
+                [[28.562302, -80.577356], [28.3881442, -80.6056464]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d53e3f7d433d39a5781320db69bc3461);
+        
+    
+            poly_line_4acfe4aa441518a33686b8a288d017d6.bindTooltip(
+                `<div>
+                     Town/city centre: Cape Canaveral (19.56 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var mouse_position_2fae1fad6a561f5dbafc8fa53ae60524 = new L.Control.MousePosition(
+                {
+  "position": "bottomright",
+  "separator": " : ",
+  "emptyString": "Unavailable",
+  "lngFirst": false,
+  "numDigits": 5,
+  "prefix": "",
+}
+            );
+            mouse_position_2fae1fad6a561f5dbafc8fa53ae60524.options["latFormatter"] =
+                undefined;
+            mouse_position_2fae1fad6a561f5dbafc8fa53ae60524.options["lngFormatter"] =
+                undefined;
+            map_d53e3f7d433d39a5781320db69bc3461.addControl(mouse_position_2fae1fad6a561f5dbafc8fa53ae60524);
+        
+    
+            tile_layer_cf5a2cd5525b4d4da985474b3b087830.addTo(map_d53e3f7d433d39a5781320db69bc3461);
+        
+    
+                marker_4ad416916e583afea9da21976ea40685.setIcon(icon_2a861ad8d796e19473a101ec9b59ce2a);
+            
+    
+                marker_518555f69346295a59b4cce824fd8229.setIcon(icon_1f724d274775a8ce8e674a6a497b4741);
+            
+    
+                marker_0f67dbb458d6b7eb374233579108a6c6.setIcon(icon_b9cdf4cf945cd542caaf3227f837f574);
+            
+    
+                marker_e4fad5a3d37199ae32b7040dd5b6cea4.setIcon(icon_d3f1d60f5001a7e560236f20ca0fa5be);
+            
+    
+                marker_80b59d6b966fd58f6516121086e60f46.setIcon(icon_f6d38ea3632ecbd5a3ce065af0de1dfa);
+            
+    
+            map_d53e3f7d433d39a5781320db69bc3461.fitBounds(
+                [[28.562302, -80.577356], [28.56340003331565, -80.56800368058639], [28.562296853757864, -80.57732328332726], [28.515758872389544, -80.61560404624608]],
+                {"padding": [70, 70]}
+            );
+        
+</script>
+</html>

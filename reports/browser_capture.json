@@ -1,0 +1,58 @@
+[
+  {
+    "name": "map_overview",
+    "tiles": 24,
+    "errors": [],
+    "marker_icon_dom_count": 4,
+    "marker_count_note": "The .leaflet-marker-icon selector does not count all AwesomeMarker icons or vector CircleMarkers. This is not a feature count."
+  },
+  {
+    "name": "map_outcomes",
+    "tiles": 35,
+    "errors": [],
+    "marker_icon_dom_count": 1,
+    "marker_count_note": "The .leaflet-marker-icon selector does not count all AwesomeMarker icons or vector CircleMarkers. This is not a feature count."
+  },
+  {
+    "name": "map_outcomes_detail",
+    "tiles": 35,
+    "errors": [],
+    "marker_icon_dom_count": 0,
+    "marker_count_note": "The .leaflet-marker-icon selector does not count all AwesomeMarker icons or vector CircleMarkers. This is not a feature count."
+  },
+  {
+    "name": "map_proximity",
+    "tiles": 30,
+    "errors": [],
+    "marker_icon_dom_count": 0,
+    "marker_count_note": "The .leaflet-marker-icon selector does not count all AwesomeMarker icons or vector CircleMarkers. This is not a feature count."
+  },
+  {
+    "name": "map_proximity_local",
+    "tiles": 40,
+    "errors": [],
+    "marker_icon_dom_count": 0,
+    "marker_count_note": "The .leaflet-marker-icon selector does not count all AwesomeMarker icons or vector CircleMarkers. This is not a feature count."
+  },
+  {
+    "name": "map_overview",
+    "tiles": 30,
+    "errors": [],
+    "marker_icon_dom_count": 2,
+    "marker_count_note": "The .leaflet-marker-icon selector does not count all AwesomeMarker icons or vector CircleMarkers. This is not a feature count."
+  },
+  {
+    "name": "map_proximity_full",
+    "tiles": 24,
+    "errors": [],
+    "marker_icon_dom_count": 1,
+    "marker_count_note": "The .leaflet-marker-icon selector does not count all AwesomeMarker icons or vector CircleMarkers. This is not a feature count."
+  },
+  {
+    "name": "map_outcomes_detail",
+    "tiles": 28,
+    "errors": [],
+    "marker_icon_dom_count": 0,
+    "marker_count_note": "The .leaflet-marker-icon selector does not count all AwesomeMarker icons or vector CircleMarkers. This is not a feature count."
+  }
+]
