@@ -1,0 +1,5 @@
+Model,Validation accuracy,Test accuracy,Best parameters
+Decision tree,0.8892857142857145,0.8333333333333334,"{'model__criterion': 'entropy', 'model__max_depth': 2, 'model__max_features': None, 'model__min_samples_leaf': 1, 'model__min_samples_split': 2, 'model__splitter': 'random'}"
+SVM,0.8625,0.8333333333333334,"{'model__C': np.float64(1.0), 'model__gamma': np.float64(0.03162277660168379), 'model__kernel': 'sigmoid'}"
+KNN,0.8482142857142858,0.7222222222222222,"{'model__algorithm': 'auto', 'model__n_neighbors': 6, 'model__p': 1}"
+Logistic regression,0.8339285714285716,0.7777777777777778,"{'model__C': 0.1, 'model__solver': 'lbfgs'}"

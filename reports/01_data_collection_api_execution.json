@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "execution_method": "IPython in-process, fresh namespace per notebook",
+  "cell": 50,
+  "error": "HTTPError: 522 Server Error: <none> for url: https://api.spacexdata.com/v4/rockets/5e9d0d95eda69955f709d1eb",
+  "seconds": 22.8
+}

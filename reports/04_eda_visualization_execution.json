@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "execution_method": "IPython in-process, fresh namespace per notebook",
+  "seconds": 3.0
+}
